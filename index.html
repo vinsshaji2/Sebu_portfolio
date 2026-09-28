@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     SEO + SHARING  (PRD §10)
+     Replace https://sebastinjojo.com/ everywhere below once the
+     domain is live (Q6). It appears in: canonical, og:url,
+     twitter:url, JSON-LD url, and sitemap.xml.
+     ============================================================ -->
+<title>Sebastin Jojo — Assistant Director &amp; Filmmaker</title>
+<meta name="description" content="Sebastin Jojo is an Assistant Director and storyteller. Commercial and campaign films for Bosch, Vivo, DMK and Thoomai Mission, plus the Malayalam short film Athiru.">
+<link rel="canonical" href="https://sebastinjojo.com/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sebastin Jojo — Assistant Director &amp; Filmmaker">
+<meta property="og:description" content="Assistant Director and storyteller. Commercials for Bosch and Vivo, campaign films for DMK and Thoomai Mission, and the short film Athiru.">
+<meta property="og:url" content="https://sebastinjojo.com/">
+<meta property="og:image" content="https://sebastinjojo.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sebastin Jojo — Assistant Director, Storyteller, Aspiring Feature Film Director">
+<meta property="og:locale" content="en_IN">
+<meta property="profile:first_name" content="Sebastin">
+<meta property="profile:last_name" content="Jojo">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sebastin Jojo — Assistant Director &amp; Filmmaker">
+<meta name="twitter:description" content="Assistant Director and storyteller. Commercials for Bosch and Vivo, campaign films for DMK and Thoomai Mission, and the short film Athiru.">
+<meta name="twitter:image" content="https://sebastinjojo.com/assets/og-image.jpg">
+
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- LCP: the hero portrait is preloaded in its smallest useful form.
+     imagesrcset mirrors the <picture> below exactly. -->
+<link rel="preload" as="image" type="image/avif"
+      href="assets/img/hero/portrait-640.avif"
+      imagesrcset="assets/img/hero/portrait-640.avif 640w, assets/img/hero/portrait-1000.avif 1000w, assets/img/hero/portrait-1280.avif 1280w"
+      imagesizes="(min-width: 1024px) 52vw, 100vw"
+      fetchpriority="high">
+
+<!-- ============================================================
+     CRITICAL CSS — first screen only (PRD §9).
+     Everything else lives in css/style.css and is loaded without
+     blocking render. Do not add page styling here.
+     ============================================================ -->
+<style>
+:root{
+  --bg:#0A0A0B; --surface:#141416; --text:#F2F2F0; --text-muted:#8A8A8F;
+  --accent:#E8C15A; --rule:rgba(255,255,255,.10); --radius:2px;
+  --gutter:clamp(20px,5vw,48px); --maxw:1320px; --header-h:64px;
+  --font-display:"Iowan Old Style","Palatino Linotype","Palatino",P052,Georgia,"Times New Roman",serif;
+  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-ml:"Noto Sans Malayalam","Manjari","Nirmala UI","Malayalam Sangam MN",sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+@media (min-width:1024px){ :root{ --header-h:76px; } }
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (min-width:1024px){body{font-size:18px}}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,figure,ul,ol{margin:0}
+:where(a,button,summary,[tabindex]):focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--radius)}
+.container{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--accent);color:#000;
+  padding:12px 18px;font-weight:600}
+.skip:focus{left:8px;top:8px}
+
+.site-header{position:fixed;inset:0 0 auto;z-index:60;height:var(--header-h);
+  display:flex;align-items:center;transition:background-color .3s var(--ease),border-color .3s var(--ease)}
+.site-header::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:transparent;transition:background-color .3s var(--ease)}
+.site-header.is-stuck{background:rgba(10,10,11,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.site-header.is-stuck::after{background:var(--rule)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--font-display);font-size:19px;letter-spacing:.02em;text-decoration:none;
+  white-space:nowrap;display:inline-flex;align-items:center;min-height:44px}
+.brand span{color:var(--accent)}
+.nav__list{display:none}
+.nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;
+  margin-right:-10px;background:none;border:0;color:inherit;cursor:pointer}
+.nav-toggle rect{fill:currentColor;transition:transform .3s var(--ease),opacity .2s linear;transform-origin:center}
+@media (min-width:768px){
+  .nav-toggle{display:none}
+  .nav__list{display:flex;gap:clamp(18px,2.4vw,36px);list-style:none;padding:0}
+  /* padding-block gives a 44px touch target on tablets without
+     changing how the link looks */
+  .nav__link{position:relative;display:inline-flex;align-items:center;min-height:44px;
+    text-decoration:none;font-size:13px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--text-muted);padding:13px 0;transition:color .25s var(--ease)}
+  .nav__link:hover,.nav__link.is-active{color:var(--text)}
+  .nav__link::after{content:"";position:absolute;left:0;right:0;bottom:11px;height:1px;
+    background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+  .nav__link.is-active::after{transform:scaleX(1)}
+}
+
+.hero{position:relative;isolation:isolate}
+.hero__media{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:52% 16%}
+.hero__scrim{position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(10,10,11,.72) 0%,rgba(10,10,11,.30) 34%,rgba(10,10,11,.86) 74%,var(--bg) 100%)}
+.hero__inner{position:relative;min-height:100vh;min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-block:calc(var(--header-h) + 40px) clamp(84px,16vh,132px)}
+/* The vh term caps the name on short viewports — 11vw of a landscape phone
+   is ~93px, which pushes the CTAs off the bottom of a 390px-tall screen. */
+.hero__name{font-family:var(--font-display);font-weight:400;line-height:.98;
+  font-size:clamp(2.75rem,min(11vw,15vh),7rem);letter-spacing:-.015em;text-wrap:balance}
+/* Three roles do not fit on one line inside the hero's text column at most
+   widths, and a wrapped separator always looks like a mistake. So they stack
+   as a title card until there is genuinely room for the inline rules. */
+.hero__role{margin-top:20px;font-size:clamp(11px,2.6vw,13px);letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-muted);
+  display:flex;flex-direction:column;gap:.45em}
+.hero__role span{display:inline-flex;align-items:center;white-space:nowrap}
+@media (min-width:1200px){
+  .hero__role{flex-direction:row;align-items:center;gap:.95em}
+  .hero__role span + span::before{content:"";width:1px;height:.9em;
+    background:var(--accent);opacity:.6;margin-right:.95em}
+}
+.hero__quote{margin-top:26px;max-width:34ch;font-family:var(--font-display);font-style:italic;
+  font-size:clamp(1.05rem,3.4vw,1.35rem);line-height:1.45;color:rgba(242,242,240,.88)}
+/* The full-bleed treatment above needs a tall viewport — cropping a 3:4
+   portrait into a short landscape box lands on the dark ceiling and the hero
+   reads as a black screen. So the two-column split takes over whenever the
+   viewport is landscape-ish, not only at desktop widths. */
+@media (min-width:1024px), (min-width:640px) and (min-aspect-ratio:1/1){
+  .hero__media{left:47%;top:0;bottom:0;right:0}
+  .hero__media img{object-position:50% 12%}
+  .hero__scrim{background:linear-gradient(to right,var(--bg) 0%,rgba(10,10,11,.55) 18%,rgba(10,10,11,0) 62%),
+    linear-gradient(to bottom,rgba(10,10,11,.55) 0%,rgba(10,10,11,0) 30%,rgba(10,10,11,.75) 100%)}
+  .hero__inner{justify-content:center;padding-block:var(--header-h) 0}
+  .hero__text{max-width:min(46vw,640px)}
+}
+/* Landscape phones: tighten the vertical rhythm so the CTAs stay on screen */
+@media (max-height:520px) and (min-aspect-ratio:1/1){
+  .hero__role{margin-top:12px}
+  .hero__quote{margin-top:14px}
+  .hero__cta{margin-top:18px}
+}
+</style>
+
+<link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+<script>document.documentElement.classList.remove('no-js');</script>
+
+<!-- JSON-LD Person schema (PRD SEO-5) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sebastin Jojo",
+  "jobTitle": "Assistant Director",
+  "description": "Assistant Director, storyteller and aspiring feature film director working across commercials, campaign films and short fiction.",
+  "url": "https://sebastinjojo.com/",
+  "image": "https://sebastinjojo.com/assets/og-image.jpg",
+  "email": "mailto:sebastin2001jojo@gmail.com",
+  "telephone": "+91-89219-71766",
+  "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" },
+  "knowsLanguage": ["en", "ml"],
+  "sameAs": ["https://www.instagram.com/sebattiiiii"],
+  "knowsAbout": ["Filmmaking", "Assistant Direction", "Script Breakdown", "Shot Planning", "Continuity"]
+}
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER / NAV (PRD §4) ================= -->
+<header class="site-header" id="header">
+  <div class="container">
+    <a class="brand" href="#home">Sebastin Jojo<span>.</span></a>
+
+    <nav id="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#works">Work</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#experience">Experience</a></li>
+        <li><a class="nav__link" href="#gallery">Gallery</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-overlay" aria-label="Open menu">
+      <svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" focusable="false">
+        <rect class="bar bar--1" y="0" width="24" height="1.5"></rect>
+        <rect class="bar bar--2" y="7.25" width="24" height="1.5"></rect>
+        <rect class="bar bar--3" y="14.5" width="24" height="1.5"></rect>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile full-screen menu (PRD §4, < 768px) -->
+<div class="nav-overlay" id="nav-overlay" hidden>
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="#works">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay__foot">
+    <a href="tel:+918921971766">+91 89219 71766</a>
+    <a href="https://www.instagram.com/sebattiiiii" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ======================= S1 — HERO ======================= -->
+<section class="hero" id="home" aria-labelledby="hero-name">
+  <div class="hero__media">
+    <picture>
+      <source type="image/avif"
+              srcset="assets/img/hero/portrait-640.avif 640w, assets/img/hero/portrait-1000.avif 1000w, assets/img/hero/portrait-1280.avif 1280w"
+              sizes="(min-width: 1024px) 52vw, 100vw">
+      <source type="image/webp"
+              srcset="assets/img/hero/portrait-640.webp 640w, assets/img/hero/portrait-1000.webp 1000w, assets/img/hero/portrait-1280.webp 1280w"
+              sizes="(min-width: 1024px) 52vw, 100vw">
+      <img src="assets/img/hero/portrait-1000.jpg"
+           srcset="assets/img/hero/portrait-640.jpg 640w, assets/img/hero/portrait-1000.jpg 1000w, assets/img/hero/portrait-1280.jpg 1280w"
+           sizes="(min-width: 1024px) 52vw, 100vw"
+           width="1280" height="1707" fetchpriority="high" decoding="async"
+           alt="Portrait of Sebastin Jojo">
+    </picture>
+    <div class="hero__scrim"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <h1 class="hero__name" id="hero-name">Sebastin Jojo</h1>
+      <p class="hero__role"><span>Assistant Director</span><span>Storyteller</span><span>Aspiring Feature Film Director</span></p>
+      <p class="hero__quote">&ldquo;I want to create stories that don&rsquo;t end when the screen goes dark.&rdquo;</p>
+      <div class="hero__cta">
+        <a class="btn" href="#works">View Work</a>
+        <a class="link-arrow" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero__cue" href="#about" aria-label="Scroll to About">
+    <span class="hero__cue-line"></span>
+  </a>
+</section>
+
+<!-- ======================= S2 — ABOUT ======================= -->
+<section class="section section--about" id="about" aria-labelledby="about-title">
+  <div class="container about">
+    <div class="about__media reveal">
+      <figure>
+        <picture>
+          <source type="image/avif" srcset="assets/img/about/sebu.avif 600w, assets/img/about/sebu.avif 900w" sizes="(min-width: 1024px) 34vw, 100vw">
+          <source type="image/webp" srcset="assets/img/about/sebu.webp 600w, assets/img/about/sebu.webp 900w" sizes="(min-width: 1024px) 34vw, 100vw">
+          <img src="assets/img/about/sebu.jpeg"
+               srcset="assets/img/about/sebu.jpeg 600w, assets/img/about/sebu.jpeg 900w"
+               sizes="(min-width: 1024px) 34vw, 100vw"
+               width="900" height="1125" loading="lazy" decoding="async"
+               alt="Sebastin Jojo, Assistant Director">
+        </picture>
+      </figure>
+    </div>
+
+    <div class="about__body">
+      <p class="label reveal">S2 &mdash; About me</p>
+      <h2 class="section__title reveal" id="about-title">The art of making people feel</h2>
+      <p class="about__lead reveal">Cinema, to me, is the art of making people feel.</p>
+      <div class="prose reveal">
+        <p>What began as creating videos with friends in school grew into a passion for transforming ideas into stories that connect with audiences. Today, that passion has taken me from assisting on commercial productions and campaign films to directing my own short film &mdash; each experience reinforcing my love for the craft of filmmaking.</p>
+        <p>On set, I&rsquo;m known for staying composed, finding practical solutions, and contributing creatively wherever needed. I&rsquo;m currently building my journey as an Assistant Director while working toward my goal of directing feature films that entertain, resonate, and leave audiences talking long after they&rsquo;ve watched them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S3 — EXPERIENCE ===================== -->
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <div class="container">
+    <p class="label reveal">S3 &mdash; Experience</p>
+    <h2 class="section__title reveal" id="experience-title">Credits</h2>
+
+    <!-- Summary stat strip (S3-R4) — keep in sync with the credits below -->
+    <ul class="stats reveal">
+      <li class="stat"><span class="stat__num">13</span><span class="stat__label">Ads</span></li>
+      <li class="stat"><span class="stat__num">1</span><span class="stat__label">Short film</span></li>
+      <li class="stat"><span class="stat__num">4</span><span class="stat__label">Brands</span></li>
+    </ul>
+
+    <ol class="credits reveal">
+
+      <!-- CREDIT ROW — copy this whole <li> to add a new credit -->
+      <li class="credit">
+        <a class="credit__row" href="#work-athiru">
+          <span class="credit__role">Director</span>
+          <span class="credit__project">
+            <span lang="ml" class="ml">അതിര്</span>
+            <span class="credit__alt">Athiru &mdash; Boundary</span>
+          </span>
+          <span class="credit__meta">Short Film <b>&times;1</b></span>
+        </a>
+      </li>
+      <!-- /CREDIT ROW -->
+
+      <li class="credit">
+        <a class="credit__row" href="#client-bosch">
+          <span class="credit__role">Assistant Director</span>
+          <span class="credit__project">Bosch</span>
+          <span class="credit__meta">Commercial <b>&times;4</b></span>
+        </a>
+      </li>
+
+      <li class="credit">
+        <a class="credit__row" href="#client-vivo">
+          <span class="credit__role">Assistant Director</span>
+          <span class="credit__project">Vivo</span>
+          <span class="credit__meta">Commercial <b>&times;1</b></span>
+        </a>
+      </li>
+
+      <li class="credit">
+        <a class="credit__row" href="#client-dmk">
+          <span class="credit__role">Assistant Director</span>
+          <span class="credit__project">DMK Campaign</span>
+          <span class="credit__meta">Campaign <b>&times;7</b></span>
+        </a>
+      </li>
+
+      <li class="credit">
+        <a class="credit__row" href="#client-thoomai">
+          <span class="credit__role">Assistant Director</span>
+          <span class="credit__project">Thoomai Mission</span>
+          <span class="credit__meta">Waste Management Campaign <b>&times;1</b></span>
+        </a>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= S4 — SKILLS ======================= -->
+<section class="section section--skills" id="skills" aria-labelledby="skills-title">
+  <div class="container">
+    <p class="label reveal">S4 &mdash; Skills</p>
+    <h2 class="section__title reveal" id="skills-title">On set</h2>
+
+    <div class="skills">
+      <div class="skills__group reveal">
+        <h3 class="skills__label">Craft</h3>
+        <ul class="chips">
+          <li class="chip" style="--i:0">Script Breakdown</li>
+          <li class="chip" style="--i:1">Shot Planning</li>
+          <li class="chip" style="--i:2">Creative Development</li>
+          <li class="chip" style="--i:3">Continuity</li>
+        </ul>
+      </div>
+      <div class="skills__group reveal">
+        <h3 class="skills__label">Production</h3>
+        <ul class="chips">
+          <li class="chip" style="--i:0">Scheduling</li>
+          <li class="chip" style="--i:1">On-set Coordination</li>
+          <li class="chip" style="--i:2">Team Management</li>
+          <li class="chip" style="--i:3">Crisis Management</li>
+          <li class="chip" style="--i:4">Problem Solving</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== S5 — WORKS ======================== -->
+<section class="section section--works" id="works" aria-labelledby="works-title">
+  <div class="container">
+    <p class="label reveal">S5 &mdash; Works</p>
+    <h2 class="section__title reveal" id="works-title">Selected work</h2>
+
+    <!-- Filters (S5-R13). Each chip targets [data-client] blocks below. -->
+    <div class="filters reveal" role="group" aria-label="Filter work by client">
+      <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-filter="direction" aria-pressed="false">Direction</button>
+      <button class="filter" type="button" data-filter="bosch" aria-pressed="false">Bosch</button>
+      <button class="filter" type="button" data-filter="vivo" aria-pressed="false">Vivo</button>
+      <button class="filter" type="button" data-filter="dmk" aria-pressed="false">DMK</button>
+      <button class="filter" type="button" data-filter="thoomai" aria-pressed="false">Thoomai</button>
+    </div>
+    <p class="filters__status" id="filter-status" role="status" aria-live="polite"></p>
+  </div>
+
+  <!-- ------------------- 5.1 DIRECTION ------------------- -->
+  <div class="work-block" data-client="direction" id="work-athiru">
+    <div class="container">
+      <h3 class="subhead reveal"><span class="subhead__num">5.1</span> Direction</h3>
+
+      <div class="feature reveal">
+        <figure class="feature__poster">
+          <!-- Poster is a 2:3 film poster and is never cropped (S5-R2).
+               Replace athiru-poster.svg with athiru-poster.jpg (800×1200). -->
+          <img src="assets/img/athiru/athiru-fl-poster.jpg" width="800" height="1200"
+               loading="lazy" decoding="async"
+               alt="Poster for the short film Athiru, directed by Sebastin Jojo">
+        </figure>
+
+        <div class="feature__body">
+          <h4 class="feature__title">
+            <span lang="ml" class="ml">അതിര്</span>
+            <span class="feature__alt">Athiru &mdash; Boundary</span>
+          </h4>
+
+          <dl class="meta">
+            <div class="meta__row"><dt>Role</dt><dd>Director</dd></div>
+            <div class="meta__row"><dt>Format</dt><dd>Short Film</dd></div>
+            <div class="meta__row"><dt>Language</dt><dd>Malayalam</dd></div>
+            <!-- TODO (PRD Q2 — blocking): uncomment and fill once confirmed.
+            <div class="meta__row"><dt>Year</dt><dd>2025</dd></div>
+            <div class="meta__row"><dt>Runtime</dt><dd>14 min</dd></div>
+            <div class="meta__row"><dt>Genre</dt><dd>Drama</dd></div>
+            -->
+          </dl>
+
+          <!-- TODO (PRD Q2 — blocking): one or two sentence logline.
+          <p class="feature__logline">A one-sentence logline goes here.</p>
+          -->
+
+          <!-- TODO (PRD Q3): if a trailer exists, this becomes the lead element.
+               Swap data-id for the YouTube id and delete hidden.
+          <button class="btn" type="button" data-lightbox="video" data-platform="youtube"
+                  data-id="YOUTUBE_ID" data-title="Athiru — trailer">Watch the trailer</button>
+          -->
+
+          <p class="feature__note">Frame grabs below. Full film available on request.</p>
+        </div>
+      </div>
+
+      <!-- Frame-grab filmstrip (S5-R4): native scroll-snap, no JS library.
+           These same files are reused by the Gallery (S6-R7) — do not duplicate. -->
+      <div class="filmstrip reveal" role="region" aria-label="Frame grabs from Athiru" tabindex="0">
+        <!-- FRAME GRAB — copy this whole <button> to add another -->
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs"
+                data-full="assets/img/athiru/athiru-fl-poster.jpg"
+                data-caption="Frame grab from Athiru">
+          <img src="assets/img/athiru/athiru-grab-1.jpg" width="1200" height="675"
+               loading="lazy" decoding="async" alt="Frame grab from the short film Athiru">
+        </button>
+        <!-- /FRAME GRAB -->
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-2.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-2.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+        
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-5.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-5.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-6.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-6.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-7.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-7.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-8.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-8.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-4.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-4.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+        <button class="grab" type="button" data-lightbox="image" data-group="grabs" data-full="assets/img/athiru/athiru-grab-3.jpg" data-caption="Frame grab from Athiru"><img src="assets/img/athiru/athiru-grab-3.jpg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------- 5.2 ASSISTANT DIRECTION --------------- -->
+  <div class="container">
+    <h3 class="subhead reveal" id="assistant-direction"><span class="subhead__num">5.2</span> Assistant Direction</h3>
+  </div>
+
+  <!-- ===== CLIENT GROUP — Bosch ===== -->
+  <div class="work-group" data-client="bosch" id="client-bosch">
+    <div class="container">
+      <div class="work-group__head reveal">
+        <h4 class="work-group__name">Bosch</h4>
+        <p class="work-group__type">Commercial</p>
+      </div>
+      <ul class="work-grid">
+
+        <!-- WORK CARD — copy this whole <li> to add a new one.
+             data-platform: instagram | youtube
+             data-id:       the reel/post shortcode, or the YouTube video id
+             href:          always the real public URL (works with JS off, S5-R14) -->
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reel/Dbatiwgse2q/"
+             target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="Dbatiwgse2q"
+             data-title="Bosch — commercial film">
+            <span class="work-card__media">
+              <img src="assets/img/bosch/Bosch1.jpeg" width="1100" height="1350"
+                   loading="lazy" decoding="async" alt="Still from a Bosch commercial film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info">
+              <span class="work-card__client">Bosch</span>
+              <span class="work-card__title">Commercial film</span>
+              <span class="work-card__role">Assistant Director</span>
+            </span>
+          </a>
+        </li>
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reels/DcBB24iCiJT/"
+             target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="Dbatiwgse2q"
+             data-title="Bosch — commercial film">
+            <span class="work-card__media">
+              <img src="assets/img/bosch/bosch2.jpeg" width="1100" height="1350"
+                   loading="lazy" decoding="async" alt="Still from a Bosch commercial film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info">
+              <span class="work-card__client">Bosch</span>
+              <span class="work-card__title">Commercial film</span>
+              <span class="work-card__role">Assistant Director</span>
+            </span>
+          </a>
+        </li>
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reels/Dbf18k7D7qv/"
+             target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="Dbatiwgse2q"
+             data-title="Bosch — commercial film">
+            <span class="work-card__media">
+              <img src="assets/img/bosch/bosch3.jpeg" width="1100" height="1350"
+                   loading="lazy" decoding="async" alt="Still from a Bosch commercial film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info">
+              <span class="work-card__client">Bosch</span>
+              <span class="work-card__title">Commercial film</span>
+              <span class="work-card__role">Assistant Director</span>
+            </span>
+          </a>
+        </li>
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reels/DbdRK75iKic/"
+             target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="Dbatiwgse2q"
+             data-title="Bosch — commercial film">
+            <span class="work-card__media">
+              <img src="assets/img/bosch/bosch4.jpeg" width="1100" height="1350"
+                   loading="lazy" decoding="async" alt="Still from a Bosch commercial film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info">
+              <span class="work-card__client">Bosch</span>
+              <span class="work-card__title">Commercial film</span>
+              <span class="work-card__role">Assistant Director</span>
+            </span>
+          </a>
+        </li>
+        <!-- /WORK CARD -->
+
+        <!-- PRD Q1 (BLOCKING): the brief lists 4 Bosch films, but 3 of the 4 URLs
+             are byte-identical to the Vivo reel (Db5VkSfx8Di) and were therefore
+             not published. Paste the 3 correct Bosch reel shortcodes below and
+             uncomment. Thumbnails already exist: thumb-bosch-02/03/04.svg
+        <li class="work-card reveal" style="--i:1">
+          <a class="work-card__link" href="https://www.instagram.com/reel/SHORTCODE/"
+             target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="SHORTCODE"
+             data-title="Bosch — commercial film">
+            <span class="work-card__media">
+              <img src="assets/img/works/thumb-bosch-02.svg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a Bosch commercial film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info">
+              <span class="work-card__client">Bosch</span>
+              <span class="work-card__title">Commercial film</span>
+              <span class="work-card__role">Assistant Director</span>
+            </span>
+          </a>
+        </li>
+        -->
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== CLIENT GROUP — Vivo ===== -->
+  <div class="work-group" data-client="vivo" id="client-vivo">
+    <div class="container">
+      <div class="work-group__head reveal">
+        <h4 class="work-group__name">Vivo</h4>
+        <p class="work-group__type">Commercial</p>
+      </div>
+      <ul class="work-grid">
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reel/Db5VkSfx8Di/"
+             target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="Db5VkSfx8Di"
+             data-title="Vivo — commercial film">
+            <span class="work-card__media">
+              <img src="assets/img/vivo/Vivo.png" width="1100" height="1350"
+                   loading="lazy" decoding="async" alt="Still from a Vivo commercial film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info">
+              <span class="work-card__client">Vivo</span>
+              <span class="work-card__title">Commercial film</span>
+              <span class="work-card__role">Assistant Director</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== CLIENT GROUP — DMK Campaign ===== -->
+  <div class="work-group" data-client="dmk" id="client-dmk">
+    <div class="container">
+      <div class="work-group__head reveal">
+        <h4 class="work-group__name">DMK Campaign</h4>
+        <p class="work-group__type">Campaign films</p>
+      </div>
+      <ul class="work-grid">
+
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reel/DOlAZZWErRW/" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="DOlAZZWErRW" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK 1.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <li class="work-card reveal" style="--i:1">
+          <a class="work-card__link" href="https://www.instagram.com/reel/DQO5VIAEp95/" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="DQO5VIAEp95" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK 2.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <li class="work-card reveal" style="--i:2">
+          <a class="work-card__link" href="https://www.instagram.com/reel/DTSnUuUifg8/" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="DTSnUuUifg8" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK 3.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <li class="work-card reveal" style="--i:3">
+          <a class="work-card__link" href="https://www.instagram.com/reel/DUYLI1VkboH/" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="DUYLI1VkboH" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK 4.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <!-- YouTube-hosted films. Thumbnails: see README, one curl per id. -->
+        <li class="work-card reveal" style="--i:5">
+          <a class="work-card__link" href="https://www.youtube.com/watch?v=-RH0utOxvyc" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="youtube" data-id="-RH0utOxvyc" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK5.jpeg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <li class="work-card reveal" style="--i:6">
+          <a class="work-card__link" href="https://www.youtube.com/watch?v=Nji6wbfoltU" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="youtube" data-id="Nji6wbfoltU" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK6.jpeg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <li class="work-card reveal" style="--i:7">
+          <a class="work-card__link" href="https://www.youtube.com/watch?v=onp4bkOl0uI" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="youtube" data-id="onp4bkOl0uI" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK7.jpeg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+        <li class="work-card reveal" style="--i:4">
+          <a class="work-card__link" href="https://www.instagram.com/p/Daj7CYvk7eZ/" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="Daj7CYvk7eZ" data-title="DMK Campaign — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/dmk/DMK8.jpeg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from a DMK campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">DMK Campaign</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== CLIENT GROUP — Thoomai Mission ===== -->
+  <div class="work-group" data-client="thoomai" id="client-thoomai">
+    <div class="container">
+      <div class="work-group__head reveal">
+        <h4 class="work-group__name">Thoomai Mission</h4>
+        <p class="work-group__type">Waste management campaign</p>
+      </div>
+      <ul class="work-grid">
+        <li class="work-card reveal" style="--i:0">
+          <a class="work-card__link" href="https://www.instagram.com/reel/DbVgCjGx_Jh/" target="_blank" rel="noopener noreferrer"
+             data-lightbox="video" data-platform="instagram" data-id="DbVgCjGx_Jh" data-title="Thoomai Mission — campaign film">
+            <span class="work-card__media">
+              <img src="assets/img/Toomaimission/Toomai mission .jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Still from the Thoomai Mission campaign film">
+              <span class="work-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="work-card__info"><span class="work-card__client">Thoomai Mission</span><span class="work-card__title">Campaign film</span><span class="work-card__role">Assistant Director</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= S6 — GALLERY ======================= -->
+<section class="section section--gallery" id="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <p class="label reveal">S6 &mdash; Gallery</p>
+    <h2 class="section__title reveal" id="gallery-title">On location</h2>
+
+    <!-- 6.1 Behind the scenes -->
+    <h3 class="subhead reveal"><span class="subhead__num">6.1</span> Behind the scenes</h3>
+    <div class="masonry reveal" data-gallery="bts">
+      <!-- GALLERY IMAGE — copy this whole <button> to add another -->
+      <!-- <button class="tile" type="button" data-lightbox="image" data-group="bts"
+              data-full="assets/img/bts/bts-1.png" data-caption="Sebastin Jojo on set">
+        <img src="assets/img/bts/bts-1.png" width="900" height="100" loading="lazy" decoding="async"
+             alt="Sebastin Jojo working on set">
+      </button> -->
+      <!-- /GALLERY IMAGE -->
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/bts/h1.jpeg" data-caption="Sebastin Jojo on set"><img src="assets/img/bts/h1.jpeg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/bts/h2.jpeg" data-caption="Sebastin Jojo on set"><img src="assets/img/bts/h2.jpeg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/bts/h3.jpeg" data-caption="Sebastin Jojo on set"><img src="assets/img/bts/h3.jpeg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/bts/h4.jpeg" data-caption="Sebastin Jojo on set"><img src="assets/img/bts/h4.jpeg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/bts/h4.jpeg" data-caption="Sebastin Jojo on set"><img src="assets/img/bts/h5.jpeg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/bts/h4.jpeg" data-caption="Sebastin Jojo on set"><img src="assets/img/bts/h6.jpeg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <!--
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-07.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-07.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-08.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-08.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-09.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-09.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-10.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-10.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-11.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-11.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-12.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-12.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      -->
+      <!-- Beyond the first 12 (S6-R6): hidden until "Show more" 
+      <button class="tile is-extra" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-13.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-13.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile is-extra" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-14.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-14.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile is-extra" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-15.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-15.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile is-extra" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-16.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-16.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile is-extra" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-17.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-17.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+      <button class="tile is-extra" type="button" data-lightbox="image" data-group="bts" data-full="assets/img/gallery/bts-18.svg" data-caption="Sebastin Jojo on set"><img src="assets/img/gallery/bts-18.svg" width="1200" height="900" loading="lazy" decoding="async" alt="Sebastin Jojo working on set"></button>
+         --> 
+    </div>
+    <!--
+    <div class="more">
+      <button class="btn btn--ghost" type="button" data-more="bts">Show more</button>
+    </div>
+    --> 
+
+    <!-- 6.2 Frame grabs — same optimised files as S5.1 (S6-R7) -->
+    <!-- <h3 class="subhead reveal"><span class="subhead__num">6.2</span> Frame grabs</h3>
+    <div class="masonry reveal" data-gallery="grabs-gallery">
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-01.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-01.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-02.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-02.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-03.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-03.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-04.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-04.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-05.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-05.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-06.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-06.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-07.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-07.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+      <button class="tile" type="button" data-lightbox="image" data-group="grabs-gallery" data-full="assets/img/works/athiru-grab-08.svg" data-caption="Frame grab from Athiru"><img src="assets/img/works/athiru-grab-08.svg" width="1200" height="675" loading="lazy" decoding="async" alt="Frame grab from the short film Athiru"></button>
+    </div>
+  </div>
+</section> -->
+
+<!-- ======================= S7 — CONTACT ======================= -->
+<section class="section section--contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <p class="label reveal">S7 &mdash; Contact</p>
+    <h2 class="section__title section__title--lg reveal" id="contact-title">
+      Available for Assistant Direction and Direction.<br>Let&rsquo;s make something.
+    </h2>
+
+    <ul class="contact">
+      <li class="contact__item reveal">
+        <a class="contact__link" href="mailto:sebastin2001jojo@gmail.com?subject=Project%20Enquiry">
+          <span class="contact__label">Email</span>
+          <span class="contact__value">sebastin2001jojo@gmail.com</span>
+        </a>
+        <button class="copy" type="button" data-copy="sebastin2001jojo@gmail.com" aria-label="Copy email address">
+          <span class="copy__text">Copy</span>
+        </button>
+      </li>
+
+      <li class="contact__item reveal">
+        <a class="contact__link" href="tel:+918921971766">
+          <span class="contact__label">Phone</span>
+          <span class="contact__value">+91 89219 71766</span>
+        </a>
+      </li>
+
+      <li class="contact__item reveal">
+        <a class="contact__link" href="https://www.instagram.com/sebattiiiii" target="_blank" rel="noopener noreferrer">
+          <span class="contact__label">Instagram</span>
+          <span class="contact__value">@sebattiiiii</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>&copy; <span id="year">2026</span> Sebastin Jojo</p>
+    <p>Kerala, India</p>
+  </div>
+</footer>
+
+<!-- ============== SHARED LIGHTBOX (PRD §7.3) ============== -->
+<dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+  <button class="lightbox__close" type="button" aria-label="Close">
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+      <path d="M3 3l14 14M17 3L3 17" stroke="currentColor" stroke-width="1.6" fill="none"/>
+    </svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M16 4L7 13l9 9" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next">
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path d="M10 4l9 9-9 9" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+  </button>
+  <div class="lightbox__stage" id="lightbox-stage"></div>
+  <p class="lightbox__caption"><span id="lightbox-caption"></span><span class="lightbox__count" id="lightbox-count"></span></p>
+</dialog>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
